@@ -4,6 +4,7 @@ Metaheuristics
 
 A ruby library of metaheuristics for search/optimisation.
 
+`gem install metaheuristics`
 
 Usage
 -----
