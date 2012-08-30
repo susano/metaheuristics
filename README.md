@@ -1,6 +1,6 @@
 
-Metaheustics
-============
+Metaheuristics
+==============
 
 A ruby library of metaheuristics for search/optimisation.
 
