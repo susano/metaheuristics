@@ -1,6 +1,5 @@
 require 'metaheuristics/metaheuristic_interface'
 require 'metaheuristics/search_results'
-require 'utils/assert'
 
 class AlpsGa < MetaheuristicInterface
 
@@ -208,8 +207,8 @@ private
 	def move_to_layer(individuals, n)
 		# add layer
 		if n > (@layers.size - 1)
-			assert{ n <  @max_layer_count }
-			assert{ n == @layers.size     }
+			raise RuntimeError unless n <  @max_layer_count
+			raise RuntimeError unless n == @layers.size
 			@layers[n] = []
 		end
 
