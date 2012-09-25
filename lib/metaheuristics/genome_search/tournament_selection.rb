@@ -1,4 +1,4 @@
-require 'metaheuristics/metaheuristic_interface'
+require 'metaheuristic_interface'
 require 'metaheuristics/individual_solution'
 require 'metaheuristics/search_results'
 
