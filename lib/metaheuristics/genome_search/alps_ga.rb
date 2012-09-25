@@ -1,4 +1,4 @@
-require 'metaheuristics/metaheuristic_interface'
+require 'metaheuristic_interface'
 require 'metaheuristics/search_results'
 
 class AlpsGa < MetaheuristicInterface
@@ -114,7 +114,8 @@ class AlpsGa < MetaheuristicInterface
 			l.sort!.reverse!
 			$stderr << "= layer #{idx} : max age #{max_layer_age(idx)} ---------------------------------------------------------------\n"
 			l.each do |i|
-				$stderr << " - #{i.solution.__id__.to_s.rjust(7)}, fitness #{i.fitness.to_i.to_s.rjust(6)}, age #{i.age.to_s.rjust(4)}\n"
+#				$stderr << " - #{i.solution.__id__.to_s.rjust(7)}, fitness #{i.fitness.to_i.to_s.rjust(6)}, age #{i.age.to_s.rjust(4)}\n"
+				$stderr << " - #{i.solution.__id__.to_s.rjust(7)}, fitness #{('%.4f' % i.fitness).rjust(7)}, age #{i.age.to_s.rjust(4)}\n"
 			end
 		end
 		$stderr << "\n"
